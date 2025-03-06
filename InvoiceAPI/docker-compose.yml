@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  invoiceapi:
+    build:
+      context: .
+      dockerfile: InvoiceAPI/Dockerfile
+    image: invoiceapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8080:8080"
+      - "8081:8081"
